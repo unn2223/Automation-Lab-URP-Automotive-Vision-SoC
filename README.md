@@ -54,10 +54,6 @@ Automation-Lab-URP-Automotive-Vision-SoC/
 `- 2025_2학기_URP_최종 발표.pptx
 ```
 
-## scripts
-- `open_project.tcl`: 이미 생성된 `prj/prj.xpr`를 바로 열어 현재 프로젝트 상태를 확인할 때 사용
-- 이 저장소는 DPU IP 재설치 없이 확인 가능한 스냅샷 열기 흐름을 기본으로 사용
-
 ## 실행 방법
 ### Vivado 프로젝트 열기
 1. Vivado `2022.1` 실행
