@@ -4,7 +4,7 @@
 Ultra96v2(Zynq UltraScale+ MPSoC) 기반 임베디드 비전 시스템에서,
 fisheye 왜곡 보정 전처리와 DPU 기반 차선 검출 추론을 통합한 프로젝트입니다.
 
-프로젝트 핵심:
+### 프로젝트 핵심:
 - PL(Programmable Logic)에서 LUT 기반 스트리밍 왜곡 보정 수행
 - Vitis AI DPU(B1600) 기반 Tiny-YOLOv3 추론 가속
 - 단일 SoC에서 전처리 + 추론 통합으로 실시간 처리 달성
@@ -58,7 +58,7 @@ Automation-Lab-URP-Automotive-Vision-SoC/
 - `open_project.tcl`: 이미 생성된 `prj/prj.xpr`를 바로 열어 현재 프로젝트 상태를 확인할 때 사용
 - 이 저장소는 DPU IP 재설치 없이 확인 가능한 스냅샷 열기 흐름을 기본으로 사용
 
-## 실행 방법 (간단)
+## 실행 방법
 ### Vivado 프로젝트 열기
 1. Vivado `2022.1` 실행
 2. `prj/prj.xpr` 열기
@@ -69,18 +69,11 @@ Automation-Lab-URP-Automotive-Vision-SoC/
 source scripts/open_project.tcl
 ```
 
-### RTL 검증(Testbench)
+## RTL 검증(Testbench)
 상세 문서: `testbench/README.md`
-
-```
 
 검증 흐름:
 1. 왜곡 입력 이미지(`640x480`)를 HEX로 변환(img_to_hex.py 실행)
 2. RTL 시뮬레이션으로 결과 HEX(`320x240`) 생성
 3. 결과 HEX를 이미지로 복원(hex_to_img.py 실행)
 4. 복원 결과를 시각적으로 확인
-
-## 참고 사항
-- 이 저장소에는 `.runs`, `.gen` 등 생성 산출물이 포함되어 있습니다.
-- 주 목적은 프로젝트 구조와 동작 재현/공유입니다.
-- 환경 차이로 인해 비트파일이 바이트 단위로 완전히 동일하지 않을 수 있습니다.
